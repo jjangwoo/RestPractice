@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/rest
+    username: root
+    password: jjangwoo
+  hikari:
+    auto-commit: false
+    connection-timeout: 3000
+    max-lifetime: 1800000
+    maximum-pool-size: 5
+    data-source-properties:
+      cachePrepStmts: true
+      rewriteBatchedStatements: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      dialect:
+        storage_engine: innodb
+      format_sql: true
+      ddl-auto: update
+      # hbm2ddl.import_files: classpath:db/hibernate/import.sql, classpath:db/hibernate/import-StageType.sql # hbm2ddl.auto=create, create-drop일 경우에만 동작
+      # hbm2ddl.import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+
+logging:
+  level:
+    root: INFO
+    org.rest: DEBUG
+
+
+server:
+  port: 8080
