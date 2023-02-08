@@ -57,7 +57,8 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // ################## FeignClient ################### //
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.1'
+
+
 }
 
 configurations {

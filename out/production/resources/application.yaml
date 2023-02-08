@@ -21,8 +21,6 @@ spring:
         storage_engine: innodb
       format_sql: true
       ddl-auto: update
-      # hbm2ddl.import_files: classpath:db/hibernate/import.sql, classpath:db/hibernate/import-StageType.sql # hbm2ddl.auto=create, create-drop일 경우에만 동작
-      # hbm2ddl.import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
 
 logging:
   level:
@@ -32,3 +30,5 @@ logging:
 
 server:
   port: 8080
+
+
